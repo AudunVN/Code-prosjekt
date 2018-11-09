@@ -676,6 +676,10 @@ textarea {
     font-weight: bold;
 }
 
+.cart-items .sum-container {
+    margin-top: 1.25em;
+}
+
 .cart-items li .product-img {
     height: 5em;
     width: 5em;
