@@ -267,6 +267,33 @@ function getCartItemCount(itemId) {
 	return 0;
 }
 
+function setCartItemCount(itemId, count) {
+	var item = getItemData(itemId, products);
+	if (item) {
+		if (count > 0) {
+            var existingItem = cart.filter(e => e.id === itemId);
+            if (existingItem.length != 0) {
+                /* product exists, set count */
+                existingItem[0].count = count;
+            } else {
+                var newItem = {
+                    id: itemId,
+                    count: count
+                };
+                cart.push(newItem);
+            }
+            storeCart();
+		} else {
+            var existingItem = cart.filter(e => e.id === itemId);
+            if (existingItem.length != 0) {
+				/* remove item if it exists */
+                cart.splice(cart.findIndex(e => e.id == itemId), 1);
+            }
+        }
+        updateCartCounter();
+	}
+}
+
 function getItemData(itemId, target) {
 	/* gets the data associated with a product stored in our products list */
 	var item = target.filter(e => e.id === itemId);
@@ -329,23 +356,41 @@ function renderCart() {
 			col2.classList.add("input-container")
 
 			const img = document.createElement("div");
+			img.style.backgroundImage = "url('./img/"+itemData.img + "')";
+			img.classList.add("product-img");
+
 			const name = document.createElement("span");
+			name.innerText = itemData.name + " (" + (cart[i].count * itemData.price) + " NOK)";
+			name.classList.add("product-name");
+
 			const countInput = document.createElement("input");
 			countInput.type = "number";
 			countInput.min = "0";
-			const countUpdateBtn = document.createElement("button");
-			const removeBtn = document.createElement("button");
-			
+			countInput.dataset.productId = cart[i].id;
+			countInput.value = cart[i].count;
 
-			img.style.backgroundImage = "url('./img/"+itemData.img + "')";
-			img.classList.add("product-img");
-			name.innerText = itemData.name + " (" + (cart[i].count * itemData.price) + " NOK)";
+			const countUpdateBtn = document.createElement("button");
 			countUpdateBtn.innerText = "Update";
+			countUpdateBtn.dataset.productId = cart[i].id;
+			countUpdateBtn.addEventListener("click", function(e){
+				var productId = this.dataset.productId;
+				var input = document.querySelector("input[data-product-id='" + productId + "']");
+				setCartItemCount(parseInt(productId), parseInt(input.value));
+				renderCart();
+			});
+
+			const removeBtn = document.createElement("button");
 			removeBtn.innerText = "Remove";
-			name.classList.add("product-name");
+			removeBtn.dataset.productId = cart[i].id;
+			removeBtn.addEventListener("click", function(e){
+				console.log(this.dataset.productId);
+				setCartItemCount(parseInt(this.dataset.productId), 0);
+				renderCart();
+			});
 
 			col1.appendChild(img);
 			col1.appendChild(name);
+
 			col2.appendChild(countInput);
 			col2.appendChild(countUpdateBtn);
 			col2.appendChild(removeBtn);
