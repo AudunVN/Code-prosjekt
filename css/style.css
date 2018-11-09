@@ -754,6 +754,18 @@ textarea {
     }
 }
 
+@media screen and (max-width: 30em) {
+    .cart-items {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .cart-items li .product-name {
+        top: 0;
+        width: 100%;
+    }
+}
+
 /* dialog styles */
 .dialog-backdrop,
 .dialog {
