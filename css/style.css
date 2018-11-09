@@ -1,6 +1,7 @@
 body {
 	margin: auto;
-	background: #E2E2E2;
+    background-color: #fafafa;
+    background-image: url("../img/texture.png");
 	font-family: 'Lato','Roboto', sans-serif;
     font-weight: 400;
     margin: 0;
@@ -24,7 +25,6 @@ body {
   height: auto;
   width: 75%;
   margin: 0 auto;
-  background-color: #E2E2E2;
   background-blend-mode: multiply;
   background-size: cover;
   align-items: center;
@@ -150,6 +150,7 @@ input[type="checkbox"] + label,
 .cart-items li .product-img {
     border-radius: 0.25em;
     overflow: hidden;
+    box-shadow: 0 0 0.1em 0 rgba(0,0,0,0.2);
 }
 
 form .submit,
@@ -164,6 +165,12 @@ input[type="checkbox"] + label {
     height: 2em;
     text-align: center;
     cursor: pointer;
+}
+
+button.inverted,
+.button.inverted {
+    background: #FF715B;
+    color: #FFF;
 }
 
 #filterList li {
@@ -252,6 +259,10 @@ form ul {
 /*Shopping Cart side*/
 
 /* navigation styles starter her */
+
+header, footer {
+    box-shadow: 0 0 0.5em 0 rgba(0,0,0,0.12);
+}
 
 header {
   background-color: #FFF;
@@ -366,9 +377,8 @@ nav a:hover {
 /* Footer */
 
 .footer-divide {
-	background-color: #fff;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
+    background-color: #fff;
+    box-sizing: border-box;
     width: 100%;
     z-index: 998;
 	text-align: center;
