@@ -242,10 +242,16 @@ input[type="checkbox"] + label,
 .cart-items li .product-img,
 .front-ad img,
 .containerElement,
-.containerElement img {
+.containerElement img,
+article img,
+article .mapouter {
     border-radius: 0.25em;
     overflow: hidden;
     box-shadow: 0 0 0.1em 0 rgba(0,0,0,0.2);
+}
+
+article img {
+    margin-top: 2em;
 }
 
 form .submit,
