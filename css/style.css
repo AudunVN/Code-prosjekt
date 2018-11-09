@@ -81,7 +81,7 @@ body {
 #filterListProducts {
   padding: 0px;
   margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     text-align: center;
 }
 
@@ -97,9 +97,15 @@ body {
 }
 
 .containerElement {
-  position: relative;
-  display: inline-block;
-  width: 25%;
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    background: white;
+    margin-bottom: 1em;
+    padding: 1em;
+    padding-bottom: 0em;
+    padding-top: 1.5em;
+    box-sizing: border-box;
 }
 
 .element {
@@ -144,13 +150,15 @@ body {
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .containerElement {
-    width: 33%;
+    width: 31%;
+    margin-right: 2%;
   }  
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
   .containerElement {
-    width: 50%;
+    width: 48%;
+    margin-right: 2%;
   }  
 }
 
@@ -220,7 +228,9 @@ form .submit,
 button,
 input[type="checkbox"] + label,
 .cart-items li .product-img,
-.front-ad img {
+.front-ad img,
+.containerElement,
+.containerElement img {
     border-radius: 0.25em;
     overflow: hidden;
     box-shadow: 0 0 0.1em 0 rgba(0,0,0,0.2);
