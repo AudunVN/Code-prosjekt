@@ -59,29 +59,15 @@ body {
 
 /* text boxes w/img */
 
-.frontcontainer {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    justify-content: center;
-    display: inline-block;
-    position: relative;
+.front-ad {
+    padding: 2em;
+    box-sizing: border-box;
 }
 
-.frontboxes {
-    margin-top: 20px;
-    margin-bottom: 4em;
-}
-
-.box {
-    float: left;
-    max-width: 70%;
-    margin: auto;
-}
-
-.box img {
-    width: 28%;
-    float: left;
+.front-ad img {
+    max-width: 90%;
+    height: 9em;
+    margin-top: 1em;
 }
 
 
@@ -95,7 +81,7 @@ body {
 #filterListProducts {
   padding: 0px;
   margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     text-align: center;
 }
 
@@ -111,9 +97,15 @@ body {
 }
 
 .containerElement {
-  position: relative;
-  display: inline-block;
-  width: 25%;
+    position: relative;
+    display: inline-block;
+    width: 25%;
+    background: white;
+    margin-bottom: 1em;
+    padding: 1em;
+    padding-bottom: 0em;
+    padding-top: 1.5em;
+    box-sizing: border-box;
 }
 
 .element {
@@ -158,13 +150,15 @@ body {
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .containerElement {
-    width: 33%;
+    width: 31%;
+    margin-right: 2%;
   }  
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
   .containerElement {
-    width: 50%;
+    width: 48%;
+    margin-right: 2%;
   }  
 }
 
@@ -233,7 +227,10 @@ form .submit,
 .button,
 button,
 input[type="checkbox"] + label,
-.cart-items li .product-img {
+.cart-items li .product-img,
+.front-ad img,
+.containerElement,
+.containerElement img {
     border-radius: 0.25em;
     overflow: hidden;
     box-shadow: 0 0 0.1em 0 rgba(0,0,0,0.2);
@@ -254,7 +251,8 @@ input[type="checkbox"] + label {
 }
 
 button.inverted,
-.button.inverted {
+.button.inverted,
+form .submit.inverted {
     background: #FF715B;
     color: #FFF;
 }
@@ -753,4 +751,15 @@ textarea {
 	background: #DDD;
 	padding: 0.5em;
 	width: 100%;
+}
+
+.mapouter {
+    max-width: 100%;
+    margin-bottom: 2em;
+}
+
+.gmap_canvas,
+#gmap_canvas {
+    width: 100%;
+    height: 30em;
 }

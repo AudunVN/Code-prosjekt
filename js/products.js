@@ -105,7 +105,7 @@ displayProducts = function (products) {
 
 		var textField = document.createElement("span");
 		textField.className = "textField";
-		textField.innerHTML = products[i].name + ", " + products[i].price + " NOK: " ;
+		textField.innerHTML = products[i].name + ", " + products[i].price + " NOK" ;
 
 		var inputField = document.createElement("input");
 		inputField.className = "inputField";
@@ -121,6 +121,7 @@ displayProducts = function (products) {
 
 		var button = document.createElement("button");
 		button.innerHTML = "Add to cart";
+		button.classList.add("inverted");
 
 		textElements.appendChild(button);
 
