@@ -87,6 +87,92 @@ body {
 
 /*About side*/
 /*Products side*/
+.filter {
+  background-color: orange;
+  padding: 2px;
+}
+
+#filterListProducts {
+  padding: 0px;
+  margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+#filterListProducts > li{
+  display: inline;
+  list-style-type:none;
+  margin: 0.25em;
+}
+
+.productsContainer {
+  background-color: white;
+  width: 100%;
+}
+
+.containerElement {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+}
+
+.element {
+  height: 200px;
+  color: black;
+  width: 100%;
+}
+
+.textElements {
+  position: relative;
+  width: 100%;
+  height: 70px;
+}
+
+.textField {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  margin: 2.5px;
+}
+
+.inputField {
+  position: absolute;
+  width: 40px;
+  right: 0px;
+  top: 0px;
+  margin: 2.5%;
+}
+
+.textElements > button {
+  position: absolute;
+  width: 97.5%;
+  bottom: 0px;
+}
+
+.element > img {
+  max-width: 100%;
+    height: 100px;
+  display: block;
+  margin: auto
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+  .containerElement {
+    width: 33%;
+  }  
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
+  .containerElement {
+    width: 50%;
+  }  
+}
+
+@media only screen and (max-width: 700px) {
+  .containerElement {
+    width: 100%;
+  }  
+}
 /*Contact side*/
 .contact-title {
     margin-top: 100px;
