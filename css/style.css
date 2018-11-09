@@ -59,9 +59,10 @@ body {
     transition: all 4s ease-in-out;
 }
 
-.contact-title h1,h2 {
+.contact-title h2, h2, h3 {
     text-align: center;
     margin: auto;
+    margin-top: 1em;
 }
 
 form {
@@ -89,6 +90,10 @@ form input {
     text-align: center;
 }
 
+.hidden {
+    display: none;
+}
+
 .cart-summary { 
     width: 75%;
     margin: 0 auto;
@@ -101,9 +106,20 @@ form input {
     letter-spacing: 2px;
 }
 
+.dialog,
 form .submit,
 .button,
-button {
+button,
+input[type="checkbox"] + label,
+.cart-items li .product-img {
+    border-radius: 0.25em;
+    overflow: hidden;
+}
+
+form .submit,
+.button,
+button,
+input[type="checkbox"] + label {
     background: #FFF;
     border-color: transparent;
     color: #FF715B;
@@ -112,6 +128,21 @@ button {
     height: 2em;
     text-align: center;
     cursor: pointer;
+}
+
+#filterList li {
+    display: inline-block;
+    margin: 0.25em;
+}
+
+#filterList {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+input[type="checkbox"] + label {
+    padding: 0.5em;
 }
 
 button.disabled,
@@ -123,12 +154,31 @@ button.disabled,
 
 form .submit:hover,
 .button:hover,
-button:hover {
+button:hover,
+input[type="checkbox"] + label:hover {
     background-color: silver;
+}
+
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"] + label {
+    user-select: none;
+}
+
+input[type="checkbox"]:checked + label {
+    background: #FF715B;
+    color: white;
 }
 
 .row > * {
 	float: left;
+}
+
+.row > .col-75p {
+	width: 75%;
 }
 
 .row > .col-50p {
@@ -330,6 +380,7 @@ nav a:hover {
 textarea {
     width: 100%;
     resize: vertical; 
+    min-height: 5em;
 }
 
 .dialog .dialog-content h4 {
@@ -456,6 +507,31 @@ textarea {
     background: silver;
 }
 
+.cart-items li {
+    list-style-type: none;
+}
+
+.cart-items li * {
+    display: inline-block;
+}
+
+.cart-items .sum-container span {
+    font-weight: bold;
+}
+
+.cart-items li .product-img {
+    height: 5em;
+    width: 5em;
+    background-size: contain;
+    backgrond-position: center center;
+}
+
+.cart-items li .product-name {
+    position: relative;
+    top: -2.25em;
+    left: 0.5em;
+}
+
 /* dialog styles */
 .dialog-backdrop,
 .dialog {
@@ -508,7 +584,7 @@ textarea {
 .dialog-header .close-dialog-btn {
     position: absolute;
     top: 0.25em;
-    right: -0.75em;
+    right: 0.25em;
     height: 1.75em;
 }
 

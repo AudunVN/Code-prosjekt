@@ -276,15 +276,32 @@ function renderCart() {
 	/* set up cart DOM contents */
 	if (cart.length > 0) {
 		const list = document.createElement("ul");
+		const sum = document.createElement("li");
+		list.classList.add("cart-items");
 		cart_container.innerHTML = "";
 		cart_container.appendChild(list);
+
 		for (i = 0; i < cart.length; i++) {
 			/* add each cart item */
-			const li = document.createElement("li");
 			const itemData = getItemData(cart[i].id, products);
-			li.innerText = itemData.name + " (" + cart[i].count + ")";
+			const li = document.createElement("li");
+			const img = document.createElement("div");
+			const name = document.createElement("span");
+
+			img.style.backgroundImage = "url('./img/"+itemData.img + "')";
+			img.classList.add("product-img");
+			name.innerText = itemData.name;
+			name.classList.add("product-name");
+			sum.classList.add("sum-container");
+
+			li.appendChild(img);
+			li.appendChild(name);
 			list.appendChild(li);
+
 		}
+
+		sum.innerHTML = "Total cost: <span>" + getTotalItemCost() + " NOK</span>";
+		list.appendChild(sum);
     }
 
     var dialog = document.querySelector(".dialog");
@@ -309,7 +326,12 @@ function renderCart() {
 
     for (var i = 0; i < emptyCartButtons.length; i++) {
         emptyCartButtons[i].removeEventListener('click', showEmptyCartDialog);
-        emptyCartButtons[i].addEventListener('click', showEmptyCartDialog);
+		emptyCartButtons[i].classList.add("hidden");
+		
+		if (getTotalItemsInCart() > 0) {
+			emptyCartButtons[i].addEventListener('click', showEmptyCartDialog);
+			emptyCartButtons[i].classList.remove("hidden");
+		}
 	}
 
 	console.log("Attempted to render cart, current cart: " + JSON.stringify(cart));
