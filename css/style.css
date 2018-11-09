@@ -522,13 +522,26 @@ textarea {
     height: 5em;
     width: 5em;
     background-size: contain;
-    backgrond-position: center center;
+    background-position: center center;
 }
 
 .cart-items li .product-name {
     position: relative;
     top: -2.25em;
     left: 0.5em;
+}
+
+.cart-items li .input-container {
+    margin-top: 1.35em;
+    padding-bottom: 1.45em;
+}
+
+.cart-items li .input-container > * {
+    margin-right: 0.5em;
+}
+
+.cart-items li .input-container input {
+    width: 5em;
 }
 
 /* dialog styles */
