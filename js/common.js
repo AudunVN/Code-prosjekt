@@ -316,25 +316,47 @@ function renderCart() {
 		cart_container.innerHTML = "";
 		cart_container.appendChild(list);
 
-		for (i = 0; i < cart.length; i++) {
+		for (i = 0; i < cart.length; i++) {			
 			/* add each cart item */
 			const itemData = getItemData(cart[i].id, products);
 			const li = document.createElement("li");
+			li.classList.add("row");
+
+			const col1 = document.createElement("div");
+			col1.classList.add("col-50p");
+			const col2 = document.createElement("div");
+			col2.classList.add("col-50p");
+			col2.classList.add("input-container")
+
 			const img = document.createElement("div");
 			const name = document.createElement("span");
+			const countInput = document.createElement("input");
+			countInput.type = "number";
+			countInput.min = "0";
+			const countUpdateBtn = document.createElement("button");
+			const removeBtn = document.createElement("button");
+			
 
 			img.style.backgroundImage = "url('./img/"+itemData.img + "')";
 			img.classList.add("product-img");
-			name.innerText = itemData.name;
+			name.innerText = itemData.name + " (" + (cart[i].count * itemData.price) + " NOK)";
+			countUpdateBtn.innerText = "Update";
+			removeBtn.innerText = "Remove";
 			name.classList.add("product-name");
-			sum.classList.add("sum-container");
 
-			li.appendChild(img);
-			li.appendChild(name);
+			col1.appendChild(img);
+			col1.appendChild(name);
+			col2.appendChild(countInput);
+			col2.appendChild(countUpdateBtn);
+			col2.appendChild(removeBtn);
+
+			li.appendChild(col1);
+			li.appendChild(col2);
+
 			list.appendChild(li);
-
 		}
 
+		sum.classList.add("sum-container");
 		sum.innerHTML = "Total cost: <span>" + getTotalItemCost() + " NOK</span>";
 		list.appendChild(sum);
     }
