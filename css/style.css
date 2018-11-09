@@ -672,6 +672,10 @@ textarea {
     background: silver;
 }
 
+.cart-items {
+    padding-left: 1em;
+}
+
 .cart-items li {
     list-style-type: none;
 }
@@ -712,6 +716,18 @@ textarea {
 
 .cart-items li .input-container input {
     width: 5em;
+}
+
+@media screen and (max-width: 30em) {
+    .cart-items {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .cart-items li .product-name {
+        top: 0;
+        width: 100%;
+    }
 }
 
 /* dialog styles */
@@ -772,6 +788,10 @@ textarea {
 
 .dialog-header h4 {
 	margin: 0;
+}
+
+.dialog > * {
+    box-sizing: border-box;
 }
 
 .dialog-header {
