@@ -371,6 +371,7 @@ function renderCart() {
 
 			const countUpdateBtn = document.createElement("button");
 			countUpdateBtn.innerText = "Update";
+			countUpdateBtn.classList.add("inverted");
 			countUpdateBtn.dataset.productId = cart[i].id;
 			countUpdateBtn.addEventListener("click", function(e){
 				var productId = this.dataset.productId;
@@ -381,6 +382,7 @@ function renderCart() {
 
 			const removeBtn = document.createElement("button");
 			removeBtn.innerText = "Remove";
+			removeBtn.classList.add("inverted");
 			removeBtn.dataset.productId = cart[i].id;
 			removeBtn.addEventListener("click", function(e){
 				console.log(this.dataset.productId);
