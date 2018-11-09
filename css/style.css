@@ -436,7 +436,6 @@ textarea {
     /* navbar i fullskjerm med transision over menu*/
     nav {
         all: unset;
-        float: center;
         margin: 3% auto;
         text-align: right;
     }
