@@ -241,7 +241,8 @@ input[type="checkbox"] + label {
 }
 
 button.inverted,
-.button.inverted {
+.button.inverted,
+form .submit.inverted {
     background: #FF715B;
     color: #FFF;
 }
@@ -740,4 +741,15 @@ textarea {
 	background: #DDD;
 	padding: 0.5em;
 	width: 100%;
+}
+
+.mapouter {
+    max-width: 100%;
+    margin-bottom: 2em;
+}
+
+.gmap_canvas,
+#gmap_canvas {
+    width: 100%;
+    height: 30em;
 }
