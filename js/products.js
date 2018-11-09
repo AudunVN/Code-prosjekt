@@ -2,7 +2,7 @@ var productsInDemand = [];
 
 var productsDiv = document.getElementById("productsDiv");
 
-var filterList = document.getElementById("filterList");
+var filterListProducts = document.getElementById("filterListProducts");
 filterArray = [];
 
 for (var i = 0; i < products.length; i++) {
@@ -34,7 +34,7 @@ displayFilter = function () {
 		li.appendChild(checkbox);
 		li.appendChild(textField);
 
-		filterList.appendChild(li);
+		filterListProducts.appendChild(li);
 
 		bindCheckbox(checkbox, filterArray[i])
 	}

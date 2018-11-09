@@ -3,12 +3,17 @@
 	padding: 2px;
 }
 
-#filterList {
+#filterListProducts {
 	padding: 0px;
+	margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
-#filterList > li{
+#filterListProducts > li{
+	display: inline;
 	list-style-type:none;
+	margin: 0.25em;
 }
 
 .productsContainer {
