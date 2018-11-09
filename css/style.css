@@ -358,6 +358,11 @@ header {
   top: 0;
 }
 
+header .logo img {
+    height: 1em;
+    position: relative;
+    top: 0.05em;
+}
 
 /* Logo -placeholder til logo*/
 .logo {
@@ -553,14 +558,6 @@ textarea {
         float: left;
         margin-left: 10%;
         text-align: center;
-    }
-
-    /* front page i full skjerm*/
-    .box {
-        all: unset;
-        display: inline-block;
-        max-width: 28%;
-        padding: 1em;
     }
 
     /* navbar i fullskjerm med transision over menu*/

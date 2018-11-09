@@ -97,6 +97,34 @@ const products = [
 		price: 32,
 		img: "bread-rolls-2.jpg",
 		category: "Bread"
+	},
+	{
+		id: 13,
+		name: "Balanced Slammer",
+		price: 32,
+		img: "cap.jpg",
+		category: "Coffee"
+	},
+	{
+		id: 14,
+		name: "Innocent Java",
+		price: 40,
+		img: "cap.jpg",
+		category: "Coffee"
+	},
+	{
+		id: 15,
+		name: "Orange Volcano",
+		price: 32,
+		img: "cap.jpg",
+		category: "Coffee"
+	},
+	{
+		id: 16,
+		name: "Imaginary Tornado",
+		price: 47,
+		img: "cap.jpg",
+		category: "Coffee"
 	}
 ];
 
