@@ -10,6 +10,8 @@ body {
     box-sizing: border-box;
     /* needs to be the same as the height of the header */
     padding-top: 3em;
+    /* set to height of footer */
+    padding-bottom: 157px;
 }
 
 /*Home side*/
@@ -27,8 +29,6 @@ body {
   background-size: cover;
   align-items: center;
   justify-items: center;
-  /* set to height of footer */
-  padding-bottom: 157px;
 }
 
 .frontcontainer {
