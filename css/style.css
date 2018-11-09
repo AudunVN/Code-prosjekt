@@ -572,6 +572,11 @@ textarea {
         text-align: right;
     }
 
+    nav li a {
+        padding-bottom: 0em;
+        padding-left: 0em;
+    }
+
     nav li {
         list-style: none;
         display: inline-block;
