@@ -3,12 +3,17 @@
 	padding: 2px;
 }
 
-#filterList {
+#filterListProducts {
 	padding: 0px;
+	margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: center;
 }
 
-#filterList > li{
+#filterListProducts > li{
+	display: inline;
 	list-style-type:none;
+	margin: 0.25em;
 }
 
 .productsContainer {
@@ -37,7 +42,7 @@
 .textField {
 	position: absolute;
 	left: 0px;
-	top: 0px;
+	top: 5px;
 	margin: 2.5px;
 }
 
@@ -62,13 +67,19 @@
 	margin: auto
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1200px) {
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+	.containerElement {
+		width: 33%;
+	}  
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1200px) {
 	.containerElement {
 		width: 50%;
 	}  
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 	.containerElement {
 		width: 100%;
 	}  
