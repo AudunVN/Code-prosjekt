@@ -8,9 +8,9 @@ var customerInfo = {
 	email: ""
 }
 
-/* 
+/*
 	images are licensed under creative commons.
-	names are (mostly) randomly generated. 
+	names are (mostly) randomly generated.
 */
 
 const products = [
@@ -75,9 +75,9 @@ if (DEBUG_MODE) {
 }
 
 function getCookie(key) {
-	/* 
+	/*
 		helper: gets cookie with input key
-		source: https://stackoverflow.com/questions/10730362/get-cookie-by-name 
+		source: https://stackoverflow.com/questions/10730362/get-cookie-by-name
 	*/
 	var value = "; " + document.cookie;
 	var parts = value.split("; " + key + "=");
@@ -109,7 +109,7 @@ function renderFinishedCallback() {
 
 	/* bind cart button onclick to open cart, add cart item counters */
 	var openCartButtons = document.getElementsByClassName("show-cart-btn");
-	
+
 	for (var i = 0; i < openCartButtons.length; i++) {
 		openCartButtons[i].addEventListener('click', showCartDialog);
 
@@ -216,7 +216,7 @@ function showCheckoutSuccessDialog() {
 	customerInfo.name = document.querySelector('input[name="first-name"]').value;
 	customerInfo.email = document.querySelector('input[name="email"]').value;
 	emptyCart();
-	showDialog("Checkout", '<div class="checkout"><p>Your order has been placed, ' + customerInfo.name + '!</p><p>A receipt has been sent to ' + customerInfo.email + ', and we\'ll send you another email when your order ships.</p></div>', '');
+	showDialog("Checkout", '<div class="checkout"><p>Your order has been placed, ' + customerInfo.name + '!</p><p>An invoice has been sent to ' + customerInfo.email + ', and we\'ll send you another email when your order ships.</p></div>', '');
 }
 
 function showCheckoutDialog() {
@@ -264,7 +264,7 @@ function renderCartSummary() {
 		sumElement.innerText = "Cost: " + getTotalItemCost() + " NOK";
 		cart_container.appendChild(sumElement);
     }
-    
+
 	console.log("Attempted to render cart summary, current cart: " + JSON.stringify(cart));
 }
 
@@ -286,7 +286,7 @@ function renderCart() {
 			list.appendChild(li);
 		}
     }
-    
+
     var dialog = document.querySelector(".dialog");
 
 	/* bind cart button listeners */
@@ -311,7 +311,7 @@ function renderCart() {
         emptyCartButtons[i].removeEventListener('click', showEmptyCartDialog);
         emptyCartButtons[i].addEventListener('click', showEmptyCartDialog);
 	}
-	
+
 	console.log("Attempted to render cart, current cart: " + JSON.stringify(cart));
 }
 
@@ -342,7 +342,7 @@ function hideDialog() {
 }
 
 function showDialog(title, contentHtml, footerHtml, onRenderCallback) {
-	/* 
+	/*
 		shows a dialog window.
 		title: shows up in the title of the dialog.
 		contentHtml: any html, shows up in the dialog body.
@@ -357,11 +357,11 @@ function showDialog(title, contentHtml, footerHtml, onRenderCallback) {
         var dialogContainer = document.createElement("div");
 		dialogContainer.className = "dialog-backdrop";
 		dialogContainer.innerHTML = dialogTemplateHtml;
-		body.appendChild(dialogContainer);   
+		body.appendChild(dialogContainer);
 	}
-	
+
 	var dialog = document.querySelector(".dialog");
-	
+
 	/* check if we already have an open dialog */
     if (body.classList.contains("dialog-visible") && !dialog.classList.contains("dialog-hidden")) {
         /* hide current dialog, open new one after a delay to give it time to close */
@@ -369,45 +369,45 @@ function showDialog(title, contentHtml, footerHtml, onRenderCallback) {
         setTimeout(function(){ showDialog(title, contentHtml, footerHtml, onRenderCallback); }, 500);
         return;
     }
-	
+
 	var dialogContainer = document.querySelector(".dialog-backdrop");
-	
+
 	/* set up dialog contents */
 	var outputTitle = 'Dialog';
 	var outputContentHtml = '<p>No content specified</p>';
 	var outputFooterHtml = '<button class="close-dialog-btn">Close</button>';
-	
+
 	if (title && title.length > 0) {
 		outputTitle = title;
 	}
-	
+
 	if (contentHtml && contentHtml.length > 0) {
 		outputContentHtml = contentHtml;
 	}
-	
+
 	if (footerHtml && title.length > 0) {
 		outputFooterHtml = footerHtml;
 	}
-	
+
 	dialog.querySelector(".dialog-title").innerHTML = outputTitle;
 	dialog.querySelector(".dialog-content").innerHTML = outputContentHtml;
 	dialog.querySelector(".dialog-footer").innerHTML = outputFooterHtml;
-	
+
 	/* bind button event listeners */
     var closeButtons = dialog.getElementsByClassName("close-dialog-btn");
-	
+
 	for (var i = 0; i < closeButtons.length; i++) {
 		 closeButtons[i].addEventListener('click', hideDialog);
     }
-	
+
 	dialogContainer.addEventListener('click', hideDialog);
 	dialog.addEventListener('click', function(e){e.stopPropagation();});
-	
+
 	/* run callback function if set */
 	if (onRenderCallback) {
 		onRenderCallback();
 	}
-	
+
 	/* show dialog */
     body.classList.add("dialog-visible");
 	dialog.classList.remove("dialog-hidden");
