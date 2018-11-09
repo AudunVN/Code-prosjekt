@@ -94,6 +94,12 @@ displayProducts = function (products) {
 		var element = document.createElement("div");
 		element.className = "element";
 
+		var productTitle = document.createElement("h4");
+		productTitle.className = "productHeader";
+		productTitle.innerText = products[i].name;
+
+		element.appendChild(productTitle);
+
 		var textElements = document.createElement("div");
 		textElements.className = "textElements";
 
@@ -105,7 +111,7 @@ displayProducts = function (products) {
 
 		var textField = document.createElement("span");
 		textField.className = "textField";
-		textField.innerHTML = products[i].name + ", " + products[i].price + " NOK" ;
+		textField.innerText = products[i].price + " NOK" ;
 
 		var inputField = document.createElement("input");
 		inputField.className = "inputField";

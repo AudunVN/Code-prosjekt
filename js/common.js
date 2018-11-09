@@ -3,6 +3,7 @@
 /* sets whether debug messages should be printed */
 const DEBUG_MODE = true;
 
+/* stores customer data after checkout */
 var customerInfo = {
 	name: "",
 	email: ""
@@ -373,7 +374,10 @@ function renderCart() {
 
 		for (i = 0; i < cart.length; i++) {			
 			/* add each cart item */
+
 			const itemData = getItemData(cart[i].id, products);
+			
+			/* set up output containers */
 			const li = document.createElement("li");
 			li.classList.add("row");
 
@@ -383,6 +387,7 @@ function renderCart() {
 			col2.classList.add("col-50p");
 			col2.classList.add("input-container")
 
+			/* set up container content */
 			const img = document.createElement("div");
 			img.style.backgroundImage = "url('./img/"+itemData.img + "')";
 			img.classList.add("product-img");
@@ -391,6 +396,7 @@ function renderCart() {
 			name.innerText = itemData.name + " (" + (cart[i].count * itemData.price) + " NOK)";
 			name.classList.add("product-name");
 
+			/* create and bind events for cart buttons and inputs */
 			const countInput = document.createElement("input");
 			countInput.type = "number";
 			countInput.min = "0";
@@ -417,6 +423,8 @@ function renderCart() {
 				setCartItemCount(parseInt(this.dataset.productId), 0);
 				renderCart();
 			});
+
+			/* add all elements to their respective parents */
 
 			col1.appendChild(img);
 			col1.appendChild(name);
