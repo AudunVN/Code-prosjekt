@@ -16,23 +16,9 @@ body {
 }
 
 /*Home side*/
-.frontpage {
-    display: block;
-    text-align: center;
-}
 
 .frontcontainer {
     margin-top: 3em;
-}
-
-.content {
-  height: auto;
-  width: 75%;
-  margin: 0 auto;
-  background-blend-mode: multiply;
-  background-size: cover;
-  align-items: center;
-  justify-items: center;
 }
 
 /* slides */
@@ -61,6 +47,45 @@ body {
 	opacity: 1;
 }
 
+.salespitch{
+    max-width: 60%;
+    margin: auto;
+    padding-top: 3em;
+    box
+}
+.salespitch h1{
+    color: #FF715B;
+    text-align: center;
+}
+
+.salespitch h3{
+    text-align: justify;
+    font-family: 'Roboto';
+
+}
+
+.featurediv {
+    width: 85%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+    border: 0;
+    border-color: #aaaaaa;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.featurediv1 {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    display: block;
+    border: 0;
+    border-color: #aaaaaa;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
 /* text boxes w/img */
 
 .front-ad {
@@ -76,29 +101,59 @@ body {
 
 
 /*About side*/
+#imgstyleabout{
+    max-height: 60vh;
+    margin: auto;
+    max-width: 100% ;
+}
+
+.mapouter {
+    max-width: 100%;
+    margin-bottom: 2em;
+}
+
+.gmap_canvas,
+#gmap_canvas {
+    width: 100%;
+    height: 30em;
+}
+
+
 /*Products side*/
+
+.content {
+    height: auto;
+    width: 75%;
+    margin: 0 auto;
+    background-blend-mode: multiply;
+    background-size: cover;
+    align-items: center;
+    justify-items: center;
+}
+
+
 .filter {
-  background-color: orange;
-  padding: 2px;
+    background-color: orange;
+    padding: 2px;
 }
 
 #filterListProducts {
-  padding: 0px;
-  margin-top: 1em;
+    padding: 0px;
+    margin-top: 1em;
     margin-bottom: 2em;
     text-align: center;
     user-select: none;
 }
 
 #filterListProducts > li{
-  display: inline;
-  list-style-type:none;
-  margin: 0.25em;
+    display: inline;
+    list-style-type:none;
+    margin: 0.25em;
 }
 
 .productsContainer {
-  background-color: white;
-  width: 100%;
+    background-color: white;
+    width: 100%;
 }
 
 .containerElement {
@@ -115,9 +170,9 @@ body {
 }
 
 .element {
-  height: 13.75em;
-  color: black;
-  width: 100%;
+    height: 13.75em;
+    color: black;
+    width: 100%;
 }
 
 .productHeader {
@@ -127,38 +182,38 @@ body {
 }
 
 .textElements {
-  position: relative;
-  width: 100%;
-  height: 70px;
+    position: relative;
+    width: 100%;
+    height: 70px;
 }
 
 .textField {
-  position: absolute;
-  left: 0px;
-  top: 5px;
-  margin: 2.5px;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    margin: 2.5px;
 }
 
 .inputField {
-  position: absolute;
-  width: 40px;
-  right: 0px;
-  top: 0px;
-  margin: 0.6em;
+    position: absolute;
+    width: 40px;
+    right: 0px;
+    top: 0px;
+    margin: 0.6em;
 }
 
 .textElements > button {
-  position: absolute;
-  width: 97.5%;
-  bottom: 0px;
+    position: absolute;
+    width: 97.5%;
+    bottom: 0px;
 }
 
 .element > img {
-  max-width: 100%;
+     max-width: 100%;
     height: 100px;
-  display: block;
-  margin: auto;
-  margin-bottom: 0.2em;
+    display: block;
+    margin: auto;
+    margin-bottom: 0.2em;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -375,7 +430,6 @@ form ul {
     list-style: none;
 }
 
-/*Shopping Cart side*/
 
 /* navigation styles starter her */
 
@@ -409,67 +463,67 @@ header .logo img {
 /* navbar mobil */
 
 .nav-toggle {
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
 .nav-toggle:focus ~ .nav-toggle-label {
-  outline: 3px solid rgba(lightblue, .75);
+    outline: 3px solid rgba(lightblue, .75);
 }
 
 .nav-toggle-label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-left: 1em;
-  padding-right: 1em;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .nav-toggle-label span, .nav-toggle-label span::before,.nav-toggle-label span::after {
-  display: block;
-  background: #FF715B;
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
+    display: block;
+    background: #FF715B;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
 }
 
 .nav-toggle-label span::before,.nav-toggle-label span::after {
-  content: '';
-  position: absolute;
+    content: '';
+    position: absolute;
 }
 
 .nav-toggle-label span::before {
-  bottom: 7px;
+    bottom: 7px;
 }
 
 .nav-toggle-label span::after {
-  top: 7px;
+    top: 7px;
 }
 
 /* nav */
 
 nav {
-  position: absolute;
-  text-align: left;
-  top: 100%;
-  left: 0;
-  background:rgba(255, 255, 255, 0.9) ;
-  width: 100%;
-  transform: scale(1, 0);
-  transform-origin: top;
-  transition: transform 400ms ease-in-out;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background:rgba(255, 255, 255, 0.9) ;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 nav li a {
@@ -482,25 +536,25 @@ nav li a {
 }
 
 nav a {
-  color: #FF715B;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  opacity: 0;
-  transition: opacity 150ms ease-in-out;
+    color: #FF715B;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
 }
 
 nav a:hover {
-  color: #000;
+    color: #000;
 }
 
 .nav-toggle:checked ~ nav {
-  transform: scale(1,1);
+    transform: scale(1,1);
 }
 
 .nav-toggle:checked ~ nav a {
-  opacity: 1;
-  transition: opacity 250ms ease-in-out 250ms;
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
 }
 
 /* Footer */
@@ -848,15 +902,4 @@ textarea {
 	background: #DDD;
 	padding: 0.5em;
 	width: 100%;
-}
-
-.mapouter {
-    max-width: 100%;
-    margin-bottom: 2em;
-}
-
-.gmap_canvas,
-#gmap_canvas {
-    width: 100%;
-    height: 30em;
 }
