@@ -9,6 +9,9 @@ document.getElementById("contact-form").addEventListener("submit", function(e){
 	/* clear inputs */
 	const inputs = document.querySelectorAll(".content input, .content textarea");
 	for (var i = 0; i < inputs.length; i++) {
-        inputs[i].value = "";
+        if (!inputs[i].classList.contains("submit")) {
+            /* stops us from removing the text of the submit button */
+            inputs[i].value = "";
+        }
 	}
 });
