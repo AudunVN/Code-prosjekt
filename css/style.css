@@ -16,7 +16,7 @@ body {
     color: #171717;
 }
 
-/*Home side*/
+/****** HOME PAGE ******/
 
 .frontcontainer {
     margin-top: 3em;
@@ -105,8 +105,8 @@ body {
     margin-top: 1em;
 }
 
+/****** ABOUT PAGE ******/
 
-/*About side*/
 #imgstyleabout{
     max-height: 60vh;
     margin: auto;
@@ -125,8 +125,7 @@ body {
     height: 30em;
 }
 
-
-/*Products side*/
+/****** PRODUCTS PAGE ******/
 
 .content {
     height: auto;
@@ -137,7 +136,6 @@ body {
     align-items: center;
     justify-items: center;
 }
-
 
 .filter {
     background-color: orange;
@@ -216,7 +214,7 @@ body {
 }
 
 .element > img {
-     max-width: 100%;
+    max-width: 100%;
     height: 100px;
     display: block;
     margin: auto;
@@ -224,25 +222,27 @@ body {
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  .containerElement {
-    width: 31%;
-    margin-right: 2%;
-  }  
+    .containerElement {
+        width: 31%;
+        margin-right: 2%;
+    }  
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {
-  .containerElement {
-    width: 48%;
-    margin-right: 2%;
-  }  
+    .containerElement {
+        width: 48%;
+        margin-right: 2%;
+    }  
 }
 
 @media only screen and (max-width: 700px) {
-  .containerElement {
-    width: 100%;
-  }  
+    .containerElement {
+        width: 100%;
+    }  
 }
-/*Contact side*/
+
+/****** CONTACT PAGE ******/
+
 .contact-title {
     margin-top: 100px;
     color: #FF715B;
@@ -437,8 +437,7 @@ form ul {
     list-style: none;
 }
 
-
-/* navigation styles starter her */
+/****** NAVIGATION STYLES ******/
 
 header, footer {
     box-shadow: 0 0 0.5em 0 rgba(0,0,0,0.12);
@@ -460,14 +459,14 @@ header .logo img {
     top: 0.05em;
 }
 
-/* Logo -placeholder til logo*/
+/* logo */
 .logo {
     color: #FF715B;
     margin: auto;    
     margin-top: 0.08em;
 }
 
-/* navbar mobil */
+/* mobile navbar */
 
 .nav-toggle {
     position: absolute;
@@ -564,7 +563,7 @@ nav a:hover {
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-/* Footer */
+/* footer */
 
 .footer-divide {
     background-color: #fff;
@@ -588,7 +587,7 @@ nav a:hover {
     line-height: 1.8;  
 }
 
-/* Footer links */
+/* footer links */
 
 .footer-divide p.footer-links {
 	font-size: 18px;
@@ -596,7 +595,7 @@ nav a:hover {
 	color: #FF715B;
 	margin: 0 0 10px;
     padding: 0;
-    line-height: 1.8;    
+    line-height: 1.8;
 }
 
 .footer-divide p.footer-links a {
@@ -640,7 +639,7 @@ textarea {
 	margin-left: 3px;
 }
 
-/* Media - desktop */
+/* nav media queries - desktop */
 
 @media screen and (min-width: 800px) {
     .footer-divide {
@@ -709,10 +708,11 @@ textarea {
         transform: scale(1,1)
     }
 
-	/* footer fullskjerm */
+	/* footer fullscreen */
     .footer-divide .footer-left {
 		text-align: left;
-	}
+    }
+    
 	.footer-divide .footer-right {
         float: right;
         text-align: right;
@@ -724,7 +724,8 @@ textarea {
 	}
 }
 
-/* cart styles */
+/****** CART STYLES ******/
+
 .cart-counter {
     font-size: 0.75em;
     padding: 0.1em 0.3em;
@@ -803,7 +804,6 @@ textarea {
     }
 }
 
-
 @media screen and (max-width: 30em) {
     .cart-items {
         text-align: center;
@@ -828,7 +828,8 @@ textarea {
     }
 }
 
-/* dialog styles */
+/****** DIALOG STYLES ******/
+
 .dialog-backdrop,
 .dialog {
 	visibility: hidden;
