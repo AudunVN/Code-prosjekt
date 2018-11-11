@@ -1,9 +1,8 @@
-  var images = [
-	"./img/adult-asian-food-celebration.jpg",
-	"./img/beans-brew-caffeine.jpg",
-  "./img/bread-breakfast-coffee.jpg"
-  
-]
+const images = [
+	"adult-asian-food-celebration.jpg",
+	"beans-brew-caffeine.jpg",
+	"bread-breakfast-coffee.jpg"
+];
 
 var currentSlide = 0;
 
@@ -15,7 +14,7 @@ function createSlides() {
 		if (i == 0) {
 			slide.classList.add("visible");
 		}
-		slide.style.backgroundImage = "url('" + images[i] + "')";
+		slide.style.backgroundImage = "url('./img/" + images[i] + "')";
 		container.appendChild(slide);
 	}
 }

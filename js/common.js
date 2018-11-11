@@ -425,7 +425,6 @@ function renderCart() {
 			});
 
 			/* add all elements to their respective parents */
-
 			col1.appendChild(img);
 			col1.appendChild(name);
 

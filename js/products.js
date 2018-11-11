@@ -6,16 +6,16 @@ var filterListProducts = document.getElementById("filterListProducts");
 filterArray = [];
 
 for (var i = 0; i < products.length; i++) {
-	console.log(products[i].category);
+	console.log("Adding product category: " + products[i].category);
 	if (filterArray.indexOf(products[i].category) > -1) {
-		console.log("already exists");
+		console.log("Filter inputs: Category already exists");
 	}
 	else {
 		filterArray.push(products[i].category);
 	}
 }
 
-console.log(filterArray);
+console.log("Filter categories: " + filterArray);
 
 function capitalizeFirstLetter(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
@@ -46,25 +46,20 @@ bindCheckbox = function (checkbox, category) {
 	checkbox.onchange = function () {
 		productsInDemand = [];
 		var index = categoryArrayInDemand.indexOf(category);
-		console.log(index);
 		if (checkbox.checked == true) {
 			if (categoryArrayInDemand.indexOf(category)<0) {
 				categoryArrayInDemand.push(category);
+			} else {
+				console.log("Filtered output: Item already exists");
 			}
-			else {
-				console.log("already exists");
-			}
-
-		}
-		else {
+		} else {
 			categoryArrayInDemand.splice(categoryArrayInDemand.indexOf(category), 1);
 		}
-		console.log(categoryArrayInDemand);
 
 		for (var i = 0; i < categoryArrayInDemand.length; i++) {
 			for (var j = 0; j < products.length; j++) {
 				if (products[j].category == categoryArrayInDemand[i]) {
-					console.log(products[j]);
+					console.log("Products in demand: Adding " + products[j].name)
 					productsInDemand.push(products[j]);
 				}
 			}
@@ -72,22 +67,18 @@ bindCheckbox = function (checkbox, category) {
 
 		if (productsInDemand.length == 0) {
 			displayProducts(products);
-		}
-		else  {
+		} else {
 			displayProducts(productsInDemand);
 		}
 	}
 }
 
-
 displayFilter();
 
 displayProducts = function (products) {
-
 	productsDiv.innerHTML = "";
 
 	for (var i = 0; i < products.length; i++) {
-
 		var containerElement = document.createElement("div");
 		containerElement.className = "containerElement";
 
@@ -137,19 +128,16 @@ displayProducts = function (products) {
 	}
 }
 
-
 bindAddToCart = function (button, product, input) {
 	button.onclick = function () {
-
 		if (input.value > 0) {
 			addToCart(product, input.value);
 
-			//Reset input-value
+			// Reset input value
 			input.value = 1;
 			input.placeholder = 1;
-		}
-		else {
-			console.log("no input value");
+		} else {
+			console.log("Add to cart: No count input value");
 		}
 	}
 }

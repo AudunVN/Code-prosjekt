@@ -262,7 +262,7 @@ form {
     max-width: 80%;
 }
 
- .form-control {
+.form-control {
     width: 100%;
     background: transparent;
     border: none;
@@ -271,7 +271,7 @@ form {
     color: #FF715B;
     font-size: 16px;
     margin-bottom: 2em;
- }
+}
 
 form input {
     height: 45px;
@@ -387,7 +387,6 @@ input[type="checkbox"] + label:hover {
     background-color: silver;
 }
 
-
 input[type="checkbox"] {
     display: none;
 }
@@ -444,13 +443,13 @@ header, footer {
 }
 
 header {
-  background-color: #FFF;
-  text-align: center;
-  position: fixed;
-  height: 3em;
-  z-index: 999;
-  width: 100%;
-  top: 0;
+    background-color: #FFF;
+    text-align: center;
+    position: fixed;
+    height: 3em;
+    z-index: 999;
+    width: 100%;
+    top: 0;
 }
 
 header .logo img {
@@ -660,7 +659,7 @@ textarea {
         text-align: center;
     }
 
-    /* navbar i fullskjerm med transision over menu*/
+    /* navbar in fullscreen with transition over menu */
     nav {
         all: unset;
         margin: 3% auto;
