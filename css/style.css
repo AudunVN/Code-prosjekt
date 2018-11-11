@@ -47,24 +47,36 @@ body {
 	opacity: 1;
 }
 
-.salespitch{
+.salespitch {
     max-width: 60%;
     margin: auto;
-    padding-top: 3em;
-    box
+    padding-top: 1.75em;
 }
-.salespitch h1{
+
+.salespitch h2 {
+    font-size: 2em;
     color: #FF715B;
     text-align: center;
+    margin-bottom: 0.9em;
+    margin-top: 0.75em;
 }
 
-.salespitch h3{
+.salespitch p {
     text-align: justify;
-    font-family: 'Roboto';
-
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-.featurediv {
+.salespitch p:first-of-type {
+    margin-top: 1.5em;
+}
+
+.salespitch p:last-of-type {
+    margin-bottom: 2.5em;
+}
+
+.feature-separator {
     width: 85%;
     margin: auto;
     margin-bottom: 20px;
@@ -75,15 +87,8 @@ body {
     border-bottom-style: solid;
 }
 
-.featurediv1 {
+.salespitch .feature-separator {
     width: 100%;
-    margin: auto;
-    margin-bottom: 20px;
-    display: block;
-    border: 0;
-    border-color: #aaaaaa;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
 }
 
 /* text boxes w/img */
@@ -105,6 +110,7 @@ body {
     max-height: 60vh;
     margin: auto;
     max-width: 100% ;
+    margin-top: 2em;
 }
 
 .mapouter {
