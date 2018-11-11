@@ -110,21 +110,21 @@ const products = [
 		id: 14,
 		name: "Innocent Java",
 		price: 40,
-		img: "cap.jpg",
+		img: "cap-2.jpg",
 		category: "Coffee"
 	},
 	{
 		id: 15,
 		name: "Orange Volcano",
 		price: 32,
-		img: "cap.jpg",
+		img: "cap-3.jpg",
 		category: "Coffee"
 	},
 	{
 		id: 16,
 		name: "Imaginary Tornado",
 		price: 47,
-		img: "cap.jpg",
+		img: "cap-4.jpg",
 		category: "Coffee"
 	}
 ];
